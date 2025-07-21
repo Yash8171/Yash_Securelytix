@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getClients, getEmployees } from '../../services/api';
 import Header from '../Common/Header';
+import Footer from '../Common/Footer';
 import './Dashboard.css';
 import { formatCurrency, formatDate } from '../../utils/validation';
 
@@ -102,7 +103,7 @@ const Dashboard = ({ user, onLogout }) => {
     <div className="dashboard-container">
       <Header user={user} onLogout={onLogout} />
 
-      <div className="dashboard-content">
+      <div className="dashboard-content main-content">
         <div className="dashboard-header">
           <h1>Dashboard</h1>
           <p>Welcome back, {user?.name}! Here's what's happening with your security operations.</p>
@@ -177,6 +178,7 @@ const Dashboard = ({ user, onLogout }) => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
