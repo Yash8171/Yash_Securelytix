@@ -24,16 +24,19 @@
   display: flex;
   gap: 1rem;
   margin: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .stat-card {
   background: #fff;
   border-radius: 12px;
   padding: 1rem;
-  flex: 1;
+  flex: 1 1 250px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  min-width: 250px;
 }
 
 .stat-icon {
@@ -55,18 +58,21 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .selectors select {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
+  min-width: 150px;
 }
 
 .details-section {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .details-card {
@@ -75,6 +81,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   flex: 1 1 300px;
+  min-width: 280px;
 }
 
 .status-active {
@@ -134,4 +141,45 @@
 
 .btn.btn-primary:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+
+  .stat-card, .details-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .selectors {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .selectors select {
+    width: 100%;
+  }
+
+  .stat-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-content {
+    padding: 1rem 0.5rem;
+  }
 }
