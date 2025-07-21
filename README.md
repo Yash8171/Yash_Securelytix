@@ -1,3 +1,4 @@
+
 # 🛡️ Yash Securelytix
 
 A full-stack secure login and dashboard application built with React (frontend) and Express.js (backend), featuring role-based authentication and dynamic data rendering for clients and employees.
@@ -10,6 +11,7 @@ A full-stack secure login and dashboard application built with React (frontend) 
 - 📊 Real-Time Data Fetching for Clients & Employees
 - 🔁 Axios Interceptors for Token Handling
 - 📦 Fully Responsive UI with React
+- 🦶 Footer section with team info and contact
 
 ## 📁 Project Structure
 
@@ -23,6 +25,9 @@ A full-stack secure login and dashboard application built with React (frontend) 
 │   └── server.js
 └── frontend
     ├── public
+    │   └── screenshots
+    │       ├── login-page.png
+    │       └── dashboard-view.png
     └── src
         ├── components
         │   ├── Common
@@ -69,10 +74,18 @@ baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
 📍 The backend health check endpoint:  
 `https://yash-securelytix.onrender.com/api/health`
 
-## 🔗 Live Demo
+## 🌐 Live Demo
 
 Frontend: [https://yash-securelytix-frontend.onrender.com](https://yash-securelytix-frontend.onrender.com)  
 Backend: [https://yash-securelytix.onrender.com/api/health](https://yash-securelytix.onrender.com/api/health)
+
+## 🖼️ Screenshots
+
+### 🔐 Login Page
+![Login Page](frontend/public/screenshots/login-page.png)
+
+### 📊 Dashboard View
+![Dashboard View](frontend/public/screenshots/dashboard-view.png)
 
 ## 📄 License
 
